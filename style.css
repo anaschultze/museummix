@@ -1,1 +1,39 @@
+@charset "UTF-8";
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 5rem 2rem;
+}
+.container .field-input {
+  text-align: center;
+}
+.container .field-input input {
+  text-align: left;
+  border-radius: 6rem;
+  border: 1px solid #a0a0a0;
+  padding: .6rem 2rem .6rem 1rem;
+  width: 12rem;
+  font-family: 'Open Sans';
+  transition: .5s;
+}
+.container .field-input input:focus {
+  outline: none;
+  border-color: #212121;
+  transition: .5s;
+}
+
+.container .field-input span:before {
+  content: '🔍';
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  top: 0.15rem;
+  right: 1.9rem;
+}
