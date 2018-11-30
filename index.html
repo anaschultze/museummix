@@ -2,18 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="functions.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <script src="functions.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>Digital Art History</title>
 </head>
 
+<body>
+
+<!-- first idea: a click button that leads to a new html page -->
+<button onclick="myFirstFunction()">Click Me 1</button>
+
+<!-- click button that leads to a new html page -->
 <div class="container">
-  <div class="field-input">
-    <input type="text" placeholder="Search the collection..." id="searchbar"/><span> </span>
-  </div>
+    <div class="field-input">
+        <input type="text" placeholder="Search the collection..." id="searchbar"><span id="mag" onclick = "myFirstFunction()"> </span>
+    </div>
+    <div class="output">
+        <table id="loadrijks"></table>
+    </div>
 </div>
 
+</body>
 </html>

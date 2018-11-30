@@ -1,4 +1,7 @@
-@charset "UTF-8";
+#results {
+    padding: 1em;
+    border: 1px solid #000000;
+}
 
 body {
   margin: 0;

@@ -1,23 +1,41 @@
- $(document).ready(function(){
+function myFirstFunction() {
+    location.href = "results.html";
+    // this also works: window.open("https://www.youraddress.com","_self")
+};
 
-    $("#searchbar").on("click", function(){
+var wage = document.getElementById("searchbar");
+wage.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+        validate(e);
+    }
+});
 
-        $.ajax({
+function validate(e) {
+    var text = e.target.value;
+    location.href = "results.html"
+}
 
-            url: "https://www.rijksmuseum.nl/api/en/collection/SK-C-5?key=fMLJ55Eu&format=json",
+// $(document).ready(function() {
 
-            success: function (result) {
+//    $("#mag").on("click", function(){
+//        alert('click!');
+
+//    });
+
+//});
+
+//$.ajax({
+
+        //    url: "https://www.rijksmuseum.nl/api/en/collection/SK-C-5?key=fMLJ55Eu&format=json",
+
+        //    success: function (result) {
 
                 // here it should say what happens when the function is correctly executed
 
-                }
-            },
+        //        }
+        //    },
 
-            error: function (result) {
-                console.log("Error: " + result);
+        //    error: function (result) {
+        //        console.log("Error: " + result);
 
-            }
-
-    });
-
-});
+        //    }
