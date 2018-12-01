@@ -15,6 +15,33 @@ function validate(e) {
     location.href = "results.html"
 }
 
+function anotherFunction1() {
+    var x = document.getElementById("myDIV1");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function anotherFunction2() {
+    var x = document.getElementById("myDIV2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function anotherFunction3() {
+    var x = document.getElementById("myDIV3");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
 // $(document).ready(function() {
 
 //    $("#mag").on("click", function(){

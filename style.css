@@ -8,12 +8,45 @@ body {
   padding: 0;
 }
 
+#mix h1 {
+    font-family: 'Impact Label Reversed', arial;
+    text-align: center;
+    font-size: 75px;
+    padding-top: 5rem;
+    cursor: default;
+}
+
+ul, li {
+    font-family: 'Impact Label Reversed', arial;
+    font-size: 25px;
+    list-style-type: none;
+    margin: 0; padding: 0;
+    padding-bottom:0.5rem;
+    cursor: pointer;
+}
+
+#myDIV1, #myDIV2, #myDIV3 {
+    font-family: 'Open Sans';
+    font-size: 15px;
+    color: grey;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em;
+    padding-bottom: 1rem;
+}
+
+.container2 {
+    text-align: center;
+    padding-bottom: 3.5rem;
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;
   width: 100%;
-  padding: 5rem 2rem;
 }
+
 .container .field-input {
   text-align: center;
 }
