@@ -42,15 +42,6 @@ function anotherFunction3() {
     }
 }
 
-// $(document).ready(function() {
-
-//    $("#mag").on("click", function(){
-//        alert('click!');
-
-//    });
-
-//});
-
 //$.ajax({
 
         //    url: "https://www.rijksmuseum.nl/api/en/collection/SK-C-5?key=fMLJ55Eu&format=json",
