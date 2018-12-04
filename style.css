@@ -8,7 +8,6 @@
          url('Impact_Label_Reversed-webfont.svg#impact_label_reversedregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 #results {
@@ -27,7 +26,7 @@ a:link, a:visited, a:hover {
 }
 
 #mix h1 {
-    font-family: 'Impact Label Reversed', arial;
+    font-family: 'impact_label_reversedregular', arial;
     text-align: center;
     font-size: 75px;
     padding-top: 5rem;
@@ -35,7 +34,7 @@ a:link, a:visited, a:hover {
 }
 
 ul, li {
-    font-family: 'Impact Label Reversed', arial;
+    font-family: 'impact_label_reversedregular', arial;
     font-size: 25px;
     list-style-type: none;
     margin: 0; padding: 0;
