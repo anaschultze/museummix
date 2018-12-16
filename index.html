@@ -5,7 +5,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="functions.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- if it doesn't work the google font Typewriter is an option as well-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>🔍 MUSEUM MIX</title>
@@ -39,14 +38,17 @@
 <!-- click button that leads to a new html page -->
 <div class="container">
     <div class="field-input">
-        <input type="text" placeholder="mix it up..." id="searchbar"><span id="mag" onclick = "myFirstFunction()"> </span>
+        <input type="text" placeholder="mix it up..." id="searchbar"><span id="mag" onclick = "myFirstFunction(searchbar.value)"> </span>
+        <!--placeholder could be "Find portraits.../paintings/artworks/artists/(museum) collections"-->
     </div>
 </div>
 <!-- or maybe "Search the collection..."-->
 
 <br><br><br><br><br><br><br>
 <!-- first idea: a click button that leads to a new html page -->
-
+<div id="pictures">
+    <p>pictures here</p>
+</div>
 
 
 <button onclick="myFirstFunction()">Click Me 1</button>
