@@ -12,10 +12,10 @@ function search(userinput) {
         //console.log(data["artObjects"]);
         //    debugger;
         for (index in data["artObjects"]){
+            console.log(index);
             if (data.artObjects[index].webImage === null) {
-                console.log("(no image found for this collection object)")
+                console.log("(no image was found for this collection object)");
             } else {
-                console.log(index);
                 console.log(data["artObjects"][index]["webImage"]["url"]);
                 var imgurl = data["artObjects"][index]["webImage"]["url"];
                     var img = document.createElement("img");
