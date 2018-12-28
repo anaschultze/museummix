@@ -84,6 +84,7 @@ ul { /* this makes the weird blue highlight go away after you click the list ite
   margin: auto;
   width: 100%;
   text-align: center;
+  padding-bottom: 5rem;
 }
 
 .container .field-input {
