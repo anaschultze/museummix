@@ -1,3 +1,4 @@
+/* this is needed to load the label font correctly */
 @font-face {
     font-family: 'impact_label_reversedregular';
     src: url('Impact_Label_Reversed-webfont.eot');
@@ -9,46 +10,30 @@
     font-style: normal;
 }
 
-/* this makes the weird blue hightlight disappear after a link is clicked,
-credit: https://stackoverflow.com/questions/10809995/css-disable-text-selection/13068082 */
-* {
-    -webkit-touch-callout:none;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-}
 
-#results {
-    padding: 1em;
-    border: 1px solid #000000;
-}
 
-#pictures {
-    margin-top: 4rem;
-    margin-bottom: 3rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f5; /* maybe light blue but white also works as a background color */
-}
-
-a:link, a:visited, a:hover {
-    text-decoration: none;
-    background-color: none;
-    color:black;
-}
-
+/* syling the header */
 #mix h1 {
     font-family: 'impact_label_reversedregular', arial;
     text-align: center;
     font-size: 75px;
     padding-top: 4rem;
     cursor: default;
+}
+
+
+
+/* styling the body in general */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f5; /* this is light blue, but maybe white also works as a background color */
+}
+
+a:link, a:visited, a:hover {
+    text-decoration: none;
+    background-color: none;
+    color:black;
 }
 
 ul, li {
@@ -58,6 +43,27 @@ ul, li {
     margin: 0; padding: 0;
     padding-bottom: 0.5rem;
     cursor: pointer;
+}
+
+
+
+/* styling the info blocks */
+.container2 {
+    /*align: center;
+    text-align: center;
+    padding-bottom: 3px;*/
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+ul { /* this makes the weird blue highlight go away after you click the list items */
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 }
 
 #myDIV1, #myDIV2, #myDIV3 {
@@ -71,19 +77,19 @@ ul, li {
     padding-bottom: 1rem;
 }
 
-.container2 {
-    text-align: center;
-    padding-bottom: 3rem;
-}
 
+
+/* styling the search bar */
 .container {
-  max-width: 960px;
-  margin: 0 auto;
+  margin: auto;
   width: 100%;
+  text-align: center;
 }
 
 .container .field-input {
-  text-align: center;
+    position: center;
+    padding-left: 18px;
+
 }
 
 .container .field-input input {
@@ -109,4 +115,14 @@ ul, li {
   position: relative;
   top: 0.15rem;
   right: 1.9rem;
+}
+
+
+
+/*styling the part where the pictures load*/
+#pictures {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
