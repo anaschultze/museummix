@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="functions.js"></script>
+    <script src="functions.js" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -18,15 +18,15 @@
 
 <div class="container2">
     <ul class="menu">
-        <li class="sub" onclick="anotherFunction1()">HOW DOES IT WORK?</li>
+        <li class="sub" onclick="expandOrCollapsePanel1()">HOW DOES IT WORK?</li>
             <div id="myDIV1">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             </div>
-        <li class="sub" onclick="anotherFunction2()">THE CASE FOR PORTRAITS</li>
+        <li class="sub" onclick="expandOrCollapsePanel2()">THE CASE FOR PORTRAITS</li>
             <div id="myDIV2">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             </div>
-        <li class="sub" onclick="anotherFunction3()">ABOUT THE PROJECT</li>
+        <li class="sub" onclick="expandOrCollapsePanel3()">ABOUT THE PROJECT</li>
             <div id="myDIV3">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                 <br><br>
@@ -35,27 +35,13 @@
     </ul>
 </div>
 
-<!-- click button that leads to a new html page -->
 <div class="container">
     <div class="field-input">
-        <input type="text" placeholder="mix it up..." id="searchbar"><span id="mag" onclick = "myFirstFunction(searchbar.value)"> </span>
-        <!--placeholder could be "Find portraits.../paintings/artworks/artists/(museum) collections"-->
+        <input type="text" placeholder="mix it up..." id="searchbar"><span id="mag" onclick = "search(searchbar.value)">
     </div>
 </div>
-<!-- or maybe "Search the collection..."-->
 
-<div id="pictures">
+<div id="images">
 </div>
 
 </body>
-
-
-<!-- <button onclick="myFirstFunction()">Click Me 1</button> -->
-
-
-<!-- Place this tag where you want the button to render. -->
-<!--
-<div class="output">
-    <table id="loadrijks"></table>
-</div>
--->
