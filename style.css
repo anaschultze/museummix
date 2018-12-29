@@ -74,10 +74,15 @@ ul { /* this makes the weird blue highlight go away after you click the list ite
     margin-left: auto;
     margin-right: auto;
     width: 45%;
+    padding-top: 0.5rem;
     padding-bottom: 1rem;
     /*text-align: justify;
     -moz-text-align-last: center;
     text-align-last: center;*/
+}
+
+#myDIV3 .container2 {
+    padding-bottom: 0rem;
 }
 
 
