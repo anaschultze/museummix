@@ -76,16 +76,52 @@ ul { /* this makes the weird blue highlight go away after you click the list ite
     width: 45%;
     padding-top: 0.5rem;
     padding-bottom: 1rem;
+    cursor: auto;
     /*text-align: justify;
     -moz-text-align-last: center;
     text-align-last: center;*/
+}
+
+#myDIV1 a:hover, #myDIV3 a:hover {
+  text-decoration: underline;
 }
 
 #myDIV3 .container2 {
     padding-bottom: 0rem;
 }
 
+#button {
+    border-radius: 5px;
+    background-color: white;
+    padding: 0.5em;
+    color: black;
+    justify-content: center;
+    margin: 6px;
+    box-shadow: 5px 5px lightgrey;
+    font-family: 'impact_label_reversedregular', arial;
+    font-size: 17px;
+}
 
+#button:hover {
+    background-color: lightgrey;
+    box-shadow: 5px 5px grey;
+}
+
+/*
+border-radius: 10px;
+width: 50%;
+background-color: #52BDEC;
+box-shadow: 5px 5px #1D8DB0;
+padding: 1.5em;
+margin: 45px;
+margin-left: 18%;
+font-style: normal;
+color: white;
+font-family: 'Lato', sans-serif;
+text-decoration: none;
+justify-content: center;
+display: flex;
+*/
 
 /* styling the search bar */
 .container {
