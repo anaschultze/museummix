@@ -9,7 +9,7 @@ function search(userinput) {
     // 1: Rijksmuseum
     var request = new XMLHttpRequest();
     var url = "https://www.rijksmuseum.nl/api/nl/collection?q=" + userinput + "&key=fMLJ55Eu&format=json";
-    request.open('GET', url, true); // open a new connection, using the GET request on the URL endpoint
+    request.open('GET', url, false); // open a new connection, using the GET request on the URL endpoint
     request.onload = function () { // begin accessing JSON data here
 
         var data = JSON.parse(this.response);
@@ -67,7 +67,7 @@ function search(userinput) {
     // 3: Cooper Hewitt
     var request = new XMLHttpRequest();
     var url = "https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.objects&access_token=8f0db3bddb24f6ac556ebc4f09995f79&query=" + userinput;
-    request.open('GET', url, true); // open a new connection, using the GET request on the URL endpoint
+    request.open('GET', url, false); // open a new connection, using the GET request on the URL endpoint
     request.onload = function () { // begin accessing JSON data here
 
         var data = JSON.parse(this.response);
@@ -110,6 +110,4 @@ function search(userinput) {
         img.src = pictures[i]["imgurl"];
         imgdiv.appendChild(img);
     }
-
-
 }
