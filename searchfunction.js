@@ -12,9 +12,6 @@ function search(userinput) {
     request.onload = function () { // begin accessing JSON data here
 
         var data = JSON.parse(this.response);
-        // console.log(data);
-        // console.log(data["artObjects"]) ;
-        //    debugger;
         var objects = data["artObjects"];
         var olength = objects.length;
         for (i = 0; i < olength; i++){
@@ -60,8 +57,6 @@ function search(userinput) {
             }
 
         }
-        // console.log(data["artObjects"]);
-        //    debugger;
 
     }
     request.send();
@@ -69,9 +64,6 @@ function search(userinput) {
     console.log(pictures);
     var plength = pictures.length;
     console.log(pictures[0]);
-
-    // Abort and alert if array empty?
-    // Sort results?
 
     // Step 5: Show results
     var imgdiv = document.getElementById("images");
