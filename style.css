@@ -76,6 +76,13 @@ ul { /* this makes the weird blue highlight go away after you click the list ite
     cursor: auto;
 }
 
+#images {
+    font-family: 'Open Sans';
+    font-size: 15px;
+    color: grey;
+    text-align: center;
+}
+
 #myDIV1 a:hover, #myDIV3 a:hover {
   text-decoration: underline;
 }
