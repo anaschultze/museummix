@@ -1,12 +1,11 @@
 function search(userinput) {
-    // Step 0: Remove current results
+    // Step 1: Remove current results
     document.getElementById("images").innerHTML = "";
 
-    // Step 1: Make an array for the results
+    // Step 2: Make an array for the results
     var pictures = new Array();
 
-    // Step 2: Call the various APIs and add results to array
-    // 1: Rijksmuseum
+    // Step 3: Call the Rijksmuseum API and add results to array
     var request = new XMLHttpRequest();
     var url = "https://www.rijksmuseum.nl/api/nl/collection?q=" + userinput + "&key=fMLJ55Eu&format=json";
     request.open('GET', url, false); // open a new connection, using the GET request on the URL endpoint
@@ -14,7 +13,7 @@ function search(userinput) {
 
         var data = JSON.parse(this.response);
         // console.log(data);
-        // console.log(data["artObjects"]);
+        // console.log(data["artObjects"]) ;
         //    debugger;
         var objects = data["artObjects"];
         var olength = objects.length;
@@ -34,36 +33,9 @@ function search(userinput) {
         }
     }
     request.send();
-    // 2: Met
-    // var request = new XMLHttpRequest();
-    // var url = "https://collectionapir.metmuseum.org/public/collection/collectionlisting?q=" + userinput;
-    // request.open('GET', url, true); // open a new connection, using the GET request on the URL endpoint
-    // request.onload = function () { // begin accessing JSON data here
-    //
-    //     var data = JSON.parse(this.response);
-    //     console.log(data);
-    //     // console.log(data["artObjects"]);
-    //     //    debugger;
-    //     for (index in data["artObjects"]){
-    //         // Add to Array
-    //         if (data.artObjects[index].webImage === null) {
-    //             console.log("(no image was found for this collection object)");
-    //         } else {
-    //             var image = {
-    //                 artist: data["artObjects"][index]["principalOrFirstMaker"],
-    //                 title: data["artObjects"][index]["title"],
-    //                 imgurl: data["artObjects"][index]["webImage"]["url"],
-    //                 weburl: data["artObjects"][index]["links"]["web"],
-    //                 api: "Met"
-    //             };
-    //             pictures.push(image);
-    //         }
-    //     }
-    // }
-    // request.send();
 
 
-    // 3: Cooper Hewitt
+    // Step 4: call the Cooper Hewitt API
     var request = new XMLHttpRequest();
     var url = "https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.objects&access_token=8f0db3bddb24f6ac556ebc4f09995f79&query=" + userinput;
     request.open('GET', url, false); // open a new connection, using the GET request on the URL endpoint
@@ -97,9 +69,9 @@ function search(userinput) {
     console.log(pictures);
     var plength = pictures.length;
     console.log(pictures[0]);
-    // Step 3: abort and alert if array empty
 
-    // Step 4: Sort results?
+    // Abort and alert if array empty?
+    // Sort results?
 
     // Step 5: Show results
     var imgdiv = document.getElementById("images");
@@ -114,6 +86,5 @@ function search(userinput) {
     } else {
         imgdiv.innerHTML = "No museum objects were found for this query...<br>Try again!";
     }
-
 
 }
