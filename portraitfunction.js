@@ -1,4 +1,4 @@
-function search(userinput) {
+function portrait() {
     // Step 1: Remove current results
     document.getElementById("images").innerHTML = "";
 
@@ -7,7 +7,7 @@ function search(userinput) {
 
     // Step 3: Call the Rijksmuseum API and add results to array
     var request = new XMLHttpRequest();
-    var url = "https://www.rijksmuseum.nl/api/nl/collection?q=" + userinput + "&key=fMLJ55Eu&format=json";
+    var url = "https://www.rijksmuseum.nl/api/nl/collection?q=" + "portrait" + "&key=fMLJ55Eu&format=json";
     request.open('GET', url, false); // open a new connection, using the GET request on the URL endpoint
     request.onload = function () { // begin accessing JSON data here
 
@@ -71,32 +71,10 @@ function search(userinput) {
     if (plength != 0) {
         for (i = 0; i < plength; i++){
             console.log(i);
-
-            var web = document.createElement("a");
-            web.href = pictures[i]["weburl"];
-            web.target = "_blank";
-            web.class = "loadingpictures";
-            web.text = pictures[i]["title"];
-
-            var pic = document.createElement("img");
-            pic.src = pictures[i]["imgurl"];
-
-            // var info = document.createElement("span");
-
-            // if (pictures[i]["artist"] == null) {
-            //     info.text = pictures[i]["title"]
-            // } else {
-            //     info.text = pictures[i]["title"] + "(" + pictures[i]["artist"] + ")"
-            // }
-
-            imgdiv.appendChild(web);
-            imgdiv.appendChild(pic);
-            //imgdiv.appendChild(info);
-
-            //web.text = pictures[i]["title"];
-            //web.target = "_blank";
+            var img = document.createElement("img");
+            img.src = pictures[i]["imgurl"];
+            imgdiv.appendChild(img);
         }
-
     } else {
         imgdiv.innerHTML = "No museum objects were found for this query...<br>Try again!";
     }

@@ -100,7 +100,8 @@ ul { /* this makes the weird blue highlight go away after you click the list ite
     margin: 12px;
     box-shadow: 5px 5px lightgrey;
     font-family: 'impact_label_reversedregular', arial;
-    font-size: 17px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 #button:hover {
