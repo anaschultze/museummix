@@ -76,24 +76,14 @@ function search(userinput) {
             web.href = pictures[i]["weburl"];
             web.target = "_blank";
             web.class = "loadingpictures";
-            
-            pic = web.appendChild(document.createElement("img"));
+            //web.text = pictures[i]["title"];
+
+            var pic = web.appendChild(document.createElement("img"));
             pic.src = pictures[i]["imgurl"];
-            pic.target = "_blank"
+            pic.target = "_blank";
 
             imgdiv.appendChild(web);
 
-
-
-
-            // var element = document.createElement("div");
-            // element.appendChild(document.createTextNode('The man who mistook his wife for a hat'));
-            // document.getElementById('lc').appendChild(element);
-            //
-            // var pic = document.createElement("img");
-            // pic.src = pictures[i]["imgurl"];
-            // imgdiv.appendChild(pic);
-            //
             // var info = document.createElement("span");
             //
             // if (pictures[i]["artist"] == null) {

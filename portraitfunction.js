@@ -71,9 +71,17 @@ function portrait() {
     if (plength != 0) {
         for (i = 0; i < plength; i++){
             console.log(i);
-            var img = document.createElement("img");
-            img.src = pictures[i]["imgurl"];
-            imgdiv.appendChild(img);
+            var web = document.createElement("a");
+            web.href = pictures[i]["weburl"];
+            web.target = "_blank";
+            web.class = "loadingpictures";
+            //web.text = pictures[i]["title"];
+
+            var pic = web.appendChild(document.createElement("img"));
+            pic.src = pictures[i]["imgurl"];
+            pic.target = "_blank";
+
+            imgdiv.appendChild(web);
         }
     } else {
         imgdiv.innerHTML = "No museum objects were found for this query...<br>Try again!";
