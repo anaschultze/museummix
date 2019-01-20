@@ -153,9 +153,22 @@ ul { /* this makes the weird blue highlight go away after you click the list ite
 
 
 /*styling the part where the pictures load*/
-#pictures {
+/* #images {
     margin-top: 4rem;
     margin-bottom: 3rem;
     margin-left: 2rem;
     margin-right: 2rem;
+} */
+
+#overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  transition: .5s ease;
+}
+
+#overlay:hover {
+  opacity: 0.5;
 }

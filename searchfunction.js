@@ -75,14 +75,16 @@ function search(userinput) {
             var web = document.createElement("a");
             web.href = pictures[i]["weburl"];
             web.target = "_blank";
-            web.class = "loadingpictures";
+            web.id = "loadingpictures";
             //web.text = pictures[i]["title"];
 
             var pic = web.appendChild(document.createElement("img"));
             pic.src = pictures[i]["imgurl"];
             pic.target = "_blank";
+            pic.id = "overlay";
 
             imgdiv.appendChild(web);
+
 
             // var info = document.createElement("span");
             //
