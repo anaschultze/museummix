@@ -153,22 +153,68 @@ ul { /* this makes the weird blue highlight go away after you click the list ite
 
 
 /*styling the part where the pictures load*/
-/* #images {
-    margin-top: 4rem;
-    margin-bottom: 3rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-} */
 
-#overlay {
+.resultlink {
+    display:inline-block;
+    width: 25vw;
+    height: 25vw;
+    margin: 15px;
+}
+
+.imgcontainer {
+    display: block;
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.image {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 1;
-  transition: .5s ease;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  /*transition: .5s ease;*/
 }
 
-#overlay:hover {
-  opacity: 0.5;
+.overlay:hover .text {
+  opacity: 1;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.imgcontainer:hover .overlay {
+    opacity: 1;
+}
+
+.imgcontainer:hover .image {
+    opacity: 0.25;
 }

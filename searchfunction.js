@@ -7,7 +7,7 @@ function search(userinput) {
 
     // Step 3: Call the Rijksmuseum API and add results to array
     var request = new XMLHttpRequest();
-    var url = "https://www.rijksmuseum.nl/api/nl/collection?q=" + userinput + "&key=fMLJ55Eu&format=json";
+    var url = "https://www.rijksmuseum.nl/api/en/collection?q=" + userinput + "&key=fMLJ55Eu&format=json";
     request.open('GET', url, false); // open a new connection, using the GET request on the URL endpoint
     request.onload = function () { // begin accessing JSON data here
 
@@ -74,14 +74,29 @@ function search(userinput) {
 
             var web = document.createElement("a");
             web.href = pictures[i]["weburl"];
+            web.className = "resultlink";
             web.target = "_blank";
-            web.id = "loadingpictures";
-            //web.text = pictures[i]["title"];
 
-            var pic = web.appendChild(document.createElement("img"));
+            var container = document.createElement("div");
+            container.className = "imgcontainer";
+
+            var pic = document.createElement("img");
             pic.src = pictures[i]["imgurl"];
+            pic.className = "image";
             pic.target = "_blank";
-            pic.id = "overlay";
+            container.appendChild(pic);
+
+            var overlay = document.createElement("div");
+            overlay.className = "overlay";
+
+            var info = document.createElement("div");
+            info.textContent = pictures[i]["title"];
+            info.className = "text";
+            overlay.appendChild(info);
+
+            container.appendChild(overlay);
+
+            web.appendChild(container);
 
             imgdiv.appendChild(web);
 
